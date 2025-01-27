@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 0;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
         count = 0;
         SetCountText();
         winTextObject.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -54,6 +56,7 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
+            audioSource.Play();
         }
     }
     private void OnCollisionEnter(Collision collision)
