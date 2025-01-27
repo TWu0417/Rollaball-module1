@@ -6,7 +6,8 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-
+    private AudioSource dingSound;
+    public AudioClip dingSoundClip;
     private Rigidbody rb;
     private int count;
     private float movementX;
@@ -22,7 +23,8 @@ public class PlayerController : MonoBehaviour
         count = 0;
         SetCountText();
         winTextObject.SetActive(false);
-        audioSource = GetComponent<AudioSource>();
+        dingSound = gameObject.AddComponent<AudioSource>();
+        dingSound.clip = dingSoundClip;
     }
 
 
@@ -36,12 +38,13 @@ public class PlayerController : MonoBehaviour
     void SetCountText()
 	{
         countText.text = "Count: " +count.ToString();
-        if (count >= 8)
+        if (count >= 9)
         { 
             winTextObject.SetActive (true);
             Destroy(GameObject.FindGameObjectWithTag("Enemy"));
         }
-	}
+        
+    }
 
     private void FixedUpdate()
     {
@@ -56,7 +59,7 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
-            audioSource.Play();
+            dingSound.Play();
         }
     }
     private void OnCollisionEnter(Collision collision)

@@ -952,6 +952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a5c78f1ae218347830643ca3f5f559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dingSoundClip: {fileID: 8300000, guid: 9ec2a1a856fa26f4a91b1449f7a1b522, type: 3}
   speed: 10
   countText: {fileID: 766629008}
   winTextObject: {fileID: 1583170897}
