@@ -29,13 +29,15 @@ public class BallController : MonoBehaviour
     //game ball's Rigidbody
     private Rigidbody ballRb;
 
+    public GameObject ball;
+
     private void Start()
     {
         //get the Interactable script on this GameObject (the controller)
         interactable = GetComponent<Interactable>();
 
         //get the ball's Rigidbody so we can add force to it
-        ballRb = GameObject.Find("/Ball").GetComponent<Rigidbody>();
+        ballRb = ball.GetComponent<Rigidbody>();
     }
 
     private void Update()
