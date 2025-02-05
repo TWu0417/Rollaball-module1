@@ -6,6 +6,7 @@ public class TimerLose : MonoBehaviour
 {
 	public GameObject rollaballField;
 	public GameObject enemyObject;
+	public GameObject youLoseText;
 
 	void Start()
 	{
@@ -16,6 +17,7 @@ public class TimerLose : MonoBehaviour
 		if (collision.gameObject.CompareTag("Enemy"))
 		{
 			// Destroy the current object
+			youLoseText.SetActive(true);
 			rollaballField.gameObject.SetActive(false);
 			enemyObject.gameObject.SetActive(false);
 
