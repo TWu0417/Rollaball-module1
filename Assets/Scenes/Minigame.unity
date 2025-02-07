@@ -2622,7 +2622,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249630388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebfd962d284a4864c8259246ff8c07ca, type: 3}
   m_Name: 
@@ -2697,6 +2697,7 @@ GameObject:
   - component: {fileID: 895932751}
   - component: {fileID: 895932750}
   - component: {fileID: 895932749}
+  - component: {fileID: 895932752}
   m_Layer: 0
   m_Name: BowPickup
   m_TagString: Untagged
@@ -2820,6 +2821,18 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &895932752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895932747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d026322086a621740b822e2d2bdc35b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &959061984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5737,12 +5750,12 @@ PrefabInstance:
     - target: {fileID: 7547059976007343169, guid: 492d7968a78503945bc8a45d46ed13bd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 8.59
       objectReference: {fileID: 0}
     - target: {fileID: 7547059976007343169, guid: 492d7968a78503945bc8a45d46ed13bd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.41
+      value: -20.96
       objectReference: {fileID: 0}
     - target: {fileID: 7547059976007343169, guid: 492d7968a78503945bc8a45d46ed13bd,
         type: 3}
